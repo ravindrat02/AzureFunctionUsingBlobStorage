@@ -98,7 +98,7 @@ namespace AzureFunctionUsingBlobStorage
             blob.Properties.ContentType = "application/json";
 
             using (var ms = new MemoryStream())
-            {
+            { 
                 LoadStreamWithJson(ms, serializeJesonObject);
                 await blob.UploadFromStreamAsync(ms);
             }
